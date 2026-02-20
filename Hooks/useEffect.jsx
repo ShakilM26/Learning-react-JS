@@ -19,3 +19,14 @@ function ScoreTrack() {
 }
 
 export default ScoreTrack;
+
+// ekhane dependency array [] empty rakhle useEffect() sudhu
+// ekbar run hobe. component render onekbar hote pare.
+
+// ar dependency array [state/props] te jokhon state/props deya thakbe
+// segulo change holei useEffect abar run korbe
+
+// Dependency na dile ki hobe? 
+// API call, Timer sob render a cholbe and App slow hoye jabe
+// Dependency array side effect control kore. UI control korena.
+// Dependency array thik kore dibe useEffect kotobar cholbe.
