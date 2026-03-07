@@ -1,0 +1,10 @@
+import {z} from "zod";
+
+export const userSchema = z.object({
+    username: z.string().min(4, 'Name must be 4 letters'),
+    email: z.string().email('Invalid Email'),
+    age: z.string().refine((val) => !isNaN(Number(val)) && Number(val) >= 18, {
+        message: 'Age must be 18'
+    }),
+    password: z.string().min(6, 'Password must be 6 digits')
+})
